@@ -5,6 +5,7 @@
 #include <ranges>
 #include <random> 
 #include "windows.h"
+#include <ctime>
 using namespace std;
 
 static void Fapados_valtozat()
@@ -31,17 +32,45 @@ static void Fapados_valtozat()
                 break;
                 
             }
-            else
-            {
-                
-            }
             cout << "\n";
             Sleep(5);
         }
     }    
 }
-
+static void Random_szam_hasznalos()
+{
+    srand(time(NULL));
+    vector <string> vct = {"a","b","c","d","e","f","g","h","i","j","k","l","n","o","p","q","r","s","t","u","v","w","x","y","z"," ", "!",",","?","+","-","/","*",";","#","<",">",""};
+    string x;
+    string y = "hello world!";
+    vector <string> z;
+    
+    for (size_t i = 0; i < y.size(); i++)
+    {
+        x = y[i];
+        while(true)
+        {
+            string a = vct[rand()%vct.size()];
+            for (size_t j = 0; j < z.size(); j++)
+            {
+                cout << z[j];
+            }
+            
+            cout << a;
+            if(a == x)
+            {
+                z.push_back(a);
+                cout << "\n";
+                break;
+                
+            }
+            cout << "\n";
+            Sleep(5);
+        }
+    }      
+}
 int main()
 {
-    Fapados_valtozat();
+    Random_szam_hasznalos();
+    //Fapados_valtozat();
 }
