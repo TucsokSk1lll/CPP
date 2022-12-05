@@ -28,7 +28,6 @@ static void a2()
     {
         cout << x.substr(0,i) << endl;
     }
-    
 }
 static void a3()
 {
