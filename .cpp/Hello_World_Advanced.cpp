@@ -57,6 +57,7 @@ static void Random_szam_hasznalos()
             }
             
             cout << a;
+            
             if(a == x)
             {
                 z.push_back(a);
@@ -66,11 +67,59 @@ static void Random_szam_hasznalos()
             }
             cout << "\n";
             Sleep(5);
+            
+            
         }
+        /*Sleep(100);
+        system("cls");*/
     }      
+}
+static void advanced()
+{
+    srand(time(NULL));
+    vector <string> vct = {"a","b","c","d","e","f","g","h","i","j","k","l","n","o","p","q","r","s","t","u","v","w","x","y","z"," ", "!"};
+    string x;
+    string y = "hello world!";
+    vector <string> z;
+    
+    for (size_t i = 0; i < y.size(); i++)
+    {
+        x = y[i];
+        while(true)
+        {
+            string a = vct[rand()%vct.size()];
+            for (size_t j = 0; j < z.size(); j++)
+            {
+                cout << z[j];
+            }
+            
+
+            cout << a;
+            //Sleep(10);
+            system("cls");
+
+            
+            if(a == x)
+            {
+                z.push_back(a);
+                cout << "\n";
+                break;
+                
+            }
+            cout << "\n";
+            
+        }
+        for (size_t j = 0; j < z.size(); j++)
+        {
+            cout << z[j];
+        }
+    }  
+       
 }
 int main()
 {
-    Random_szam_hasznalos();
+    advanced();
+    //Random_szam_hasznalos();
     //Fapados_valtozat();
+    
 }
