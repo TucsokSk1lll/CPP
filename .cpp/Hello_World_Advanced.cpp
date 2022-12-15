@@ -102,11 +102,11 @@ static void advanced()
             if(a == x)
             {
                 z.push_back(a);
-                cout << "\n";
+                //cout << "\n";
                 break;
                 
             }
-            cout << "\n";
+            //cout << "\n";
             
         }
         for (size_t j = 0; j < z.size(); j++)
@@ -118,6 +118,7 @@ static void advanced()
 }
 int main()
 {
+    system("Color 2");
     advanced();
     //Random_szam_hasznalos();
     //Fapados_valtozat();
