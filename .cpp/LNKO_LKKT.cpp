@@ -2,14 +2,16 @@
 #include <vector>
 #include <bits/stdc++.h>
 #include <algorithm>
+#include<math.h>
 using namespace std;
 
 int main()
 {
+    system("color 2");
     //prímszámok kiírása
     vector <int> primes;
     vector <int> primes2;
-    vector <int> LKKT;
+    int LKKT = 1;
     
     for (size_t i = 0; i < 1000; i++)
     {
@@ -35,6 +37,8 @@ int main()
     //prímtényezők megkeresése
     int x = 2700;
     int y = 400;
+    cout << "x: " << x << endl;
+    cout << "y: " << y << endl;
     int x2 = x;
     int y2 = y;
     vector <int> prímtényező_x;
@@ -145,11 +149,11 @@ int main()
     {
         for (size_t i = 0; i < prímtényező_y.size(); i++)
         {
-            LKKT.push_back(prímtényező_y[i]);
+            number_LKKT.push_back(prímtényező_y[i]);
         }
     }
 
-    cout << "number_x: ";
+    /*cout << "number_x: ";
     for (size_t i = 0; i < number_x.size(); i++)
     {
         cout << number_x[i] << ' ';
@@ -176,16 +180,39 @@ int main()
     {
         cout << db_y[i] << ' ';
     }
-    cout << endl;
+    cout << endl;*/
 
 
 
+    for (size_t i = 0; i < number_x.size(); i++)
+    {
+        number_LKKT.push_back(number_x[i]);
+        db_LKKT.push_back(db_x[i]);
+    }
 
-
+    for (size_t i = 0; i < number_y.size(); i++)
+    {
+        if(count(number_LKKT.begin(),number_LKKT.end(),number_y[i]) == false)
+        {
+            number_LKKT.push_back(number_y[i]);
+            
+        }
+        
+        if(db_LKKT[i] < db_y[i])
+        {
+            db_LKKT[i] = db_y[i];
+        }
+        
+    }
+    
+    for (size_t i = 0; i < number_LKKT.size(); i++)
+    {
+        //cout << pow(number_LKKT[i],db_LKKT[i]) << endl;
+        LKKT *= pow(number_LKKT[i],db_LKKT[i]);
+    }
     
 
-
-    cout << "number_LKKT: ";
+    /*cout << "number_LKKT: ";
     for (size_t i = 0; i < number_LKKT.size(); i++)
     {
         cout << number_LKKT[i] << ' ';
@@ -197,16 +224,12 @@ int main()
     {
         cout << db_LKKT[i] << ' ';
     }
-    cout << endl;
+    cout << endl;*/
 
     
-
     //LKKT kiírása    
-    cout << "LKKT: ";
-    for (size_t i = 0; i < LKKT.size(); i++)
-    {
-        cout << LKKT[i] << ' ';
-    }
+    cout << "LKKT: " << LKKT;
+    
     
     
     return 0;
