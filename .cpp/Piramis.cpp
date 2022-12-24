@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-    int sorok = 6;
+    int sorok = 15;
     if(sorok%2 == 1)
     {
         for (size_t i = 1; i < sorok*2; i+=2) 

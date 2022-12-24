@@ -119,8 +119,8 @@ static void advanced()
 int main()
 {
     system("Color 2");
-    advanced();
-    //Random_szam_hasznalos();
+    //advanced();
+    Random_szam_hasznalos();
     //Fapados_valtozat();
     
 }

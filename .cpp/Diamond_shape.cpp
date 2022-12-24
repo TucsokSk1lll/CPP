@@ -3,10 +3,6 @@ using namespace std;
 #include <iostream>
 #include <typeinfo>
 
-
-   
-
-
 int main()
 {
     system("color 2");
