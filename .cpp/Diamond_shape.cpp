@@ -56,7 +56,6 @@ int main()
             }
             cout << 'x';
             
-
             for (size_t j = 0; j < i; j++)
             {
                 cout << ' ';
@@ -70,9 +69,5 @@ int main()
             cout << 'x' << endl;
         }
     }
-    
-    
-    
-    
     return 0;
 }

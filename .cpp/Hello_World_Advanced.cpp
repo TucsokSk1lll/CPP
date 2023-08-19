@@ -2,7 +2,6 @@
 #include <vector>
 #include <cstring>
 #include <algorithm>
-#include <ranges>
 #include <random> 
 #include "windows.h"
 #include <ctime>

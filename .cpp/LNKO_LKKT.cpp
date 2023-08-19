@@ -2,7 +2,7 @@
 #include <vector>
 #include <bits/stdc++.h>
 #include <algorithm>
-#include<math.h>
+#include <math.h>
 using namespace std;
 
 int main()
@@ -41,8 +41,8 @@ int main()
     cout << "y: " << y << endl;
     int x2 = x;
     int y2 = y;
-    vector <int> prímtényező_x;
-    vector <int> prímtényező_y;
+    vector <int> primtenyezo_x;
+    vector <int> primtenyezo_y;
 
     // x prímtényezői
     while(x > 1)
@@ -51,7 +51,7 @@ int main()
         {
             if(x%primes[i] == 0)
             {
-                prímtényező_x.push_back(primes[i]);
+                primtenyezo_x.push_back(primes[i]);
                 x /= primes[i];
             }
         }
@@ -64,28 +64,28 @@ int main()
         {
             if(y%primes[i] == 0)
             {
-                prímtényező_y.push_back(primes[i]);
+                primtenyezo_y.push_back(primes[i]);
                 y /= primes[i];
             }
         }
     }
 
     //Vectorok rendezése növekvő sorrendbe
-    sort(prímtényező_x.begin(),prímtényező_x.end());
-    sort(prímtényező_y.begin(),prímtényező_y.end());
+    sort(primtenyezo_x.begin(),primtenyezo_x.end());
+    sort(primtenyezo_y.begin(),primtenyezo_y.end());
 
     //x és y prímtényezőinek a kiírása
     cout << "x primtenyezoi:";
-    for (size_t i = 0; i < prímtényező_x.size(); i++)
+    for (size_t i = 0; i < primtenyezo_x.size(); i++)
     {
-        cout <<  prímtényező_x[i] << " ";
+        cout <<  primtenyezo_x[i] << " ";
     }
     cout << "\n";
 
     cout << "y primtenyezoi:";
-    for (size_t i = 0; i < prímtényező_y.size(); i++)
+    for (size_t i = 0; i < primtenyezo_y.size(); i++)
     {
-        cout <<  prímtényező_y[i] << " ";
+        cout <<  primtenyezo_y[i] << " ";
     }
     cout << "\n";
 
@@ -101,13 +101,13 @@ int main()
     if(x2> y2)
     {
 
-        for (size_t i = 0; i < prímtényező_x.size(); i++)
+        for (size_t i = 0; i < primtenyezo_x.size(); i++)
         {
-            if(count(number_x.begin(),number_x.end(),prímtényező_x[i]))
+            if(count(number_x.begin(),number_x.end(),primtenyezo_x[i]))
             {
                 for (size_t j = 0; j < number_x.size(); j++)
                 {
-                    if(number_x[j] == prímtényező_x[i])
+                    if(number_x[j] == primtenyezo_x[i])
                     {
                         db_x[j]++;
                         break;
@@ -117,18 +117,18 @@ int main()
             }
             else
             {
-                number_x.push_back(prímtényező_x[i]);
+                number_x.push_back(primtenyezo_x[i]);
                 db_x.push_back(1);
             }
         }
 
-        for (size_t i = 0; i < prímtényező_y.size(); i++)
+        for (size_t i = 0; i < primtenyezo_y.size(); i++)
         {
-            if(count(number_y.begin(),number_y.end(),prímtényező_y[i]))
+            if(count(number_y.begin(),number_y.end(),primtenyezo_y[i]))
             {
                 for (size_t j = 0; j < number_y.size(); j++)
                 {
-                    if(number_y[j] == prímtényező_y[i])
+                    if(number_y[j] == primtenyezo_y[i])
                     {
                         db_y[j]++;
                         break;
@@ -138,7 +138,7 @@ int main()
             }
             else
             {
-                number_y.push_back(prímtényező_y[i]);
+                number_y.push_back(primtenyezo_y[i]);
                 db_y.push_back(1);
             }
         }
@@ -147,9 +147,9 @@ int main()
     }
     else
     {
-        for (size_t i = 0; i < prímtényező_y.size(); i++)
+        for (size_t i = 0; i < primtenyezo_y.size(); i++)
         {
-            number_LKKT.push_back(prímtényező_y[i]);
+            number_LKKT.push_back(primtenyezo_y[i]);
         }
     }
 
